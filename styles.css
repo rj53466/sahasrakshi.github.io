@@ -23,17 +23,17 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .logo {
-  height: 80px;
-  width: 250px;
+  height: 100px;
+  width: auto;
   transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .brand {
@@ -236,5 +236,3 @@ footer {
     height: 100px;
   }
 }
-
-
