@@ -23,12 +23,12 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .logo {
   height: 80px;
-  width: 250px;
+  width: auto;
   transition: transform 0.3s ease;
 }
 
@@ -236,3 +236,4 @@ footer {
     height: 100px;
   }
 }
+
