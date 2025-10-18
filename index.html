@@ -1,166 +1,82 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sahasrakshi Global Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Rajdhani', sans-serif;
-      background-color: #0e0e0e;
-      color: #f4f4f4;
-    }
-
-    header {
-      background: linear-gradient(90deg, #b32025, #f7951d);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 60px;
-    }
-
-    header img {
-      height: 100px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      margin-left: 25px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffcf75;
-    }
-
-    .hero {
-      background: radial-gradient(circle at top left, #f7951d20, #0e0e0e 70%);
-      text-align: center;
-      padding: 120px 20px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      color: #f7951d;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #ddd;
-      margin-top: 10px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn-primary {
-      background: linear-gradient(90deg, #b32025, #f7951d);
-      color: #fff;
-      border: none;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: opacity 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.8;
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #1a1a1a;
-      border: 1px solid #f7951d40;
-      border-radius: 12px;
-      padding: 25px;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-    }
-
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahasrakshi Global Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="Logoo.png" alt="Sahasrakshi Logo">
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header id="navbar">
+<div class="logo-container">
+<img src="Logoo.png" alt="Sahasrakshi Logo" class="logo">
+<!--<span class="brand">Sahasrakshi Global Services</span>-->
+</div>
+<nav class="nav-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</div>
+</header>
 
-  <section class="hero" id="home">
-    <h1>Empowering Cybersecurity Excellence</h1>
-    <p>At Sahasrakshi Global Services, we protect digital ecosystems with advanced pentesting, SOC solutions, and strategic cybersecurity consulting.</p>
-    <button class="btn-primary">Get in Touch</button>
-  </section>
 
-  <section id="services">
-    <h2 style="color:#f7951d;">Our Core Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Penetration Testing</h3>
-        <p>Identify and mitigate vulnerabilities through advanced ethical hacking methodologies.</p>
-      </div>
-      <div class="card">
-        <h3>Security Operations Center (SOC)</h3>
-        <p>24/7 monitoring, threat detection, and incident response to safeguard your infrastructure.</p>
-      </div>
-      <div class="card">
-        <h3>Cybersecurity Consulting</h3>
-        <p>Develop, audit, and implement strategic security frameworks tailored to your business.</p>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1 class="reveal">Empowering Cybersecurity Excellence</h1>
+<p class="reveal">At Sahasrakshi Global Services, we protect digital ecosystems with advanced pentesting, SOC solutions, and strategic cybersecurity consulting.</p>
+<button class="btn-primary reveal" onclick="scrollToSection('contact')">Get in Touch</button>
+</div>
+</section>
 
-  <section id="about">
-    <h2 style="color:#f7951d;">About Us</h2>
-    <p>We are a global cybersecurity company committed to delivering excellence in information security, compliance, and digital resilience. Our mission is to empower businesses with cutting-edge security intelligence.</p>
-  </section>
 
-  <section id="contact">
-    <h2 style="color:#f7951d;">Contact Us</h2>
-    <p>Email: <a href="mailto:info@sahahasrakshi.com" style="color:#f7951d; text-decoration:none;">contact@sahasrakshi.com</a></p>
-    <!--<p>Phone: +91-XXXXXXXXXX</p> -->
-  </section>
+<section id="services">
+<h2 class="section-title reveal">Our Core Services</h2>
+<div class="services">
+<div class="card reveal">
+<h3>Penetration Testing</h3>
+<p>Identify and mitigate vulnerabilities through advanced ethical hacking methodologies.</p>
+</div>
+<div class="card reveal">
+<h3>Security Operations Center (SOC)</h3>
+<p>24/7 monitoring, threat detection, and incident response to safeguard your infrastructure.</p>
+</div>
+<div class="card reveal">
+<h3>Cybersecurity Consulting</h3>
+<p>Develop, audit, and implement strategic security frameworks tailored to your business.</p>
+</div>
+</div>
+</section>
 
-  <footer>
-    <p>© 2025 Sahasrakshi Global Services. All Rights Reserved.</p>
-  </footer>
+
+<section id="about">
+<h2 class="section-title reveal">About Us</h2>
+<p class="about-text reveal">We are a global cybersecurity company committed to delivering excellence in information security, compliance, and digital resilience. Our mission is to empower businesses with cutting-edge security intelligence.</p>
+</section>
+
+
+<section id="contact">
+<h2 class="section-title reveal">Contact Us</h2>
+<form class="contact-form reveal" onsubmit="return false;">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" rows="5" required></textarea>
+<button type="submit" class="btn-primary">Send Message</button>
+</form>
+</section>
+
+
+<footer>
+<p>© 2025 Sahasrakshi Global Services. All Rights Reserved.</p>
+<button id="backToTop" onclick="scrollToTop()">↑ Back to Top</button>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
